@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "../service.pb";
+
+package service;
+
+message req {
+    string name = 1;
+}
+
+message resp {
+    bool status = 1;
+}
+
+service person_service {
+    rpc get_info(req) returns(resp);
+}
